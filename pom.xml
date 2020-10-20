@@ -62,6 +62,11 @@
     </dependency>
 
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-grpc</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-pubsub</artifactId>
     </dependency>
@@ -145,7 +150,7 @@
         <quarkus.package.type>native</quarkus.package.type>
         <quarkus.native.enable-https-url-handler>true</quarkus.native.enable-https-url-handler>
         <quarkus.native.enable-all-security-services>true</quarkus.native.enable-all-security-services>
-        <quarkus.native.additional-build-args>--initialize-at-run-time=io.grpc.netty.shaded.io.netty.handler.ssl.OpenSsl\,io.grpc.netty.shaded.io.netty.handler.ssl.OpenSslContext\,io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslEngine\,io.grpc.netty.shaded.io.netty.internal.tcnative.CertificateVerifier\,io.grpc.netty.shaded.io.netty.internal.tcnative.SSL\,io.grpc.netty.shaded.io.netty.internal.tcnative.SSLPrivateKeyMethod\,,-H:+AllowIncompleteClasspath,--report-unsupported-elements-at-runtime,-H:+TraceClassInitialization,--debug-attach=5005</quarkus.native.additional-build-args>
+        <quarkus.native.additional-build-args>--initialize-at-run-time=io.grpc.netty.shaded.io.netty.handler.ssl.OpenSsl\,io.grpc.netty.shaded.io.netty.handler.ssl.OpenSslContext\,io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslEngine\,io.grpc.netty.shaded.io.netty.internal.tcnative.CertificateVerifier\,io.grpc.netty.shaded.io.netty.internal.tcnative\,io.grpc.netty.shaded.io.netty.internal.tcnative.SSLPrivateKeyMethod\,io.grpc.netty.shaded.io.grpc.netty\,io.grpc.netty.shaded.io.netty.channel.epoll\,io.grpc.netty.shaded.io.netty.channel.unix,-H:+AllowIncompleteClasspath,--report-unsupported-elements-at-runtime,-H:+TraceClassInitialization</quarkus.native.additional-build-args>
       </properties>
     </profile>
   </profiles>
